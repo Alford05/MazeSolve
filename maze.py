@@ -111,7 +111,7 @@ class Maze:
         self._cells[i][j].visited = True
 
         # if we are at the end cell, we are done!
-        if i == self._num_cols - 1 and j == self._num_rows - 1:
+        if i == self._num_columns - 1 and j == self._num_rows - 1:
             return True
 
         # move left if there is no wall and it hasn't been visited
@@ -128,7 +128,7 @@ class Maze:
 
         # move right if there is no wall and it hasn't been visited
         if (
-            i < self._num_cols - 1
+            i < self._num_columns - 1
             and not self._cells[i][j].has_right_wall
             and not self._cells[i + 1][j].visited
         ):
